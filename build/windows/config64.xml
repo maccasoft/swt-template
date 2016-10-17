@@ -1,0 +1,33 @@
+<launch4jConfig>
+  <dontWrapJar>true</dontWrapJar>
+  <headerType>gui</headerType>
+  <outfile>launcher.exe</outfile>
+  <errTitle>SWT Application</errTitle>
+  <downloadUrl>http://www.oracle.com/technetwork/java/javase/downloads/index.html</downloadUrl>
+  <icon>launcher.ico</icon>
+  <classPath>
+    <mainClass>com.maccasoft.template.Main</mainClass>
+    <cp>%EXEDIR%/lib/*.jar</cp>
+  </classPath>
+  <jre>
+    <path>java</path>
+    <minVersion>1.7.0</minVersion>
+    <runtimeBits>64</runtimeBits>
+    <opt>-DAPP_DIR="%EXEDIR%"</opt>
+  </jre>
+  <versionInfo>
+    <fileDescription>SWT Application</fileDescription>
+    <copyright>Marco Maccaferri</copyright>
+    <productName>SWT Application</productName>
+    <companyName>Marco Maccaferri</companyName>
+    <internalName>SWT Application</internalName>
+    <originalFilename>swtapp.exe</originalFilename>
+  </versionInfo>
+  <messages>
+    <startupErr>An error occurred while starting the application.</startupErr>
+    <bundledJreErr>This application was configured to use a bundled Java Runtime Environment but the runtime is missing or corrupted.</bundledJreErr>
+    <jreVersionErr>This application requires at least Java Development Kit</jreVersionErr>
+    <launcherErr>The registry refers to a nonexistent Java Development Kit installation or the runtime is corrupted.</launcherErr>
+    <instanceAlreadyExistsMsg>An application instance is already running.</instanceAlreadyExistsMsg>
+  </messages>
+</launch4jConfig>

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=SWT Application
+GenericName=SWT Application
+Comment=SWT Application Template
+Exec=<BINARY_LOCATION>
+Icon=<ICON_NAME>
+Terminal=false
+Categories=Development;IDE;
