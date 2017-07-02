@@ -32,16 +32,16 @@
         <mkdir dir="${work}/${folder}" />
 
         <mkdir dir="${work}/bin" />
-        <javac target="1.7" source="1.7" destdir="${work}/bin" srcdir="src" debug="true" includeantruntime="false">
+        <javac target="1.8" source="1.8" destdir="${work}/bin" srcdir="src" debug="true" includeantruntime="false">
         	<classpath refid="lib.path.ref"/>
             <classpath>
-                <pathelement location="lib/org.eclipse.swt.gtk.linux.x86_64_3.104.2.v20160212-1350.jar"/>
+                <pathelement location="lib/org.eclipse.swt.gtk.linux.x86_64_3.106.0.v20170608-0516.jar"/>
             </classpath>
         </javac>
 
         <antcall target="copy-common-files" />
         <copy todir="${work}/${folder}/lib">
-            <fileset file="lib/org.eclipse.swt.gtk.linux.x86_64_3.104.2.v20160212-1350.jar"/>
+            <fileset file="lib/org.eclipse.swt.gtk.linux.x86_64_3.106.0.v20170608-0516.jar"/>
             <fileset file="build/linux/desktop.template" />
         </copy>
         <copy todir="${work}/${folder}/lib/icons">
@@ -70,16 +70,16 @@
         <mkdir dir="${work}/${folder}" />
 
         <mkdir dir="${work}/bin" />
-        <javac target="1.7" source="1.7" destdir="${work}/bin" srcdir="src" debug="true" includeantruntime="false">
+        <javac target="1.8" source="1.8" destdir="${work}/bin" srcdir="src" debug="true" includeantruntime="false">
             <classpath refid="lib.path.ref"/>
             <classpath>
-                <pathelement location="lib/org.eclipse.swt.win32.win32.x86_3.104.2.v20160212-1350.jar"/>
+                <pathelement location="lib/org.eclipse.swt.win32.win32.x86_3.106.0.v20170608-0516.jar"/>
             </classpath>
         </javac>
 
         <antcall target="copy-common-files" />
         <copy todir="${work}/${folder}/lib">
-            <fileset file="lib/org.eclipse.swt.win32.win32.x86_3.104.2.v20160212-1350.jar"/>
+            <fileset file="lib/org.eclipse.swt.win32.win32.x86_3.106.0.v20170608-0516.jar"/>
         </copy>
         <copy todir="${work}/${folder}">
             <fileset file="build/windows/launcher.l4j.ini" />
@@ -106,16 +106,16 @@
         <mkdir dir="${work}/${folder}" />
 
         <mkdir dir="${work}/bin" />
-        <javac target="1.7" source="1.7" destdir="${work}/bin" srcdir="src" debug="true" includeantruntime="false">
+        <javac target="1.8" source="1.8" destdir="${work}/bin" srcdir="src" debug="true" includeantruntime="false">
             <classpath refid="lib.path.ref"/>
             <classpath>
-                <pathelement location="lib/org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar"/>
+                <pathelement location="lib/org.eclipse.swt.win32.win32.x86_64_3.106.0.v20170608-0516.jar"/>
             </classpath>
         </javac>
 
         <antcall target="copy-common-files" />
         <copy todir="${work}/${folder}/lib">
-            <fileset file="lib/org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar"/>
+            <fileset file="lib/org.eclipse.swt.win32.win32.x86_64_3.106.0.v20170608-0516.jar"/>
         </copy>
         <copy todir="${work}/${folder}">
             <fileset file="build/windows/launcher.l4j.ini" />
@@ -142,15 +142,15 @@
         <mkdir dir="${work}/${folder}" />
 
         <mkdir dir="${work}/bin" />
-        <javac target="1.7" source="1.7" destdir="${work}/bin" srcdir="src" debug="true" includeantruntime="false">
+        <javac target="1.8" source="1.8" destdir="${work}/bin" srcdir="src" debug="true" includeantruntime="false">
             <classpath refid="lib.path.ref"/>
             <classpath>
-                <pathelement location="lib/org.eclipse.swt.cocoa.macosx.x86_64_3.104.2.v20160212-1350.jar"/>
+                <pathelement location="lib/org.eclipse.swt.cocoa.macosx.x86_64_3.106.0.v20170608-0516.jar"/>
             </classpath>
         </javac>
 
         <antcall target="copy-common-files" />
-        <copy todir="${work}/${folder}/lib" file="lib/org.eclipse.swt.cocoa.macosx.x86_64_3.104.2.v20160212-1350.jar"/>
+        <copy todir="${work}/${folder}/lib" file="lib/org.eclipse.swt.cocoa.macosx.x86_64_3.106.0.v20170608-0516.jar"/>
 
         <bundleapp
             outputdirectory="${work}"
@@ -166,6 +166,7 @@
 
             <classpath file="${work}/${folder}/lib/*.jar"/>
 
+            <option value="-DAPP_DIR=$APP_ROOT/Contents/Java"/>
             <option value="-Dcom.apple.macos.useScreenMenuBar=true"/>
             <option value="-Xms128M"/>
             <option value="-Xmx512M"/>
@@ -184,15 +185,15 @@
     </target>
 	
 	<path id="lib.path.ref">
-        <pathelement location="lib/org.eclipse.core.commands_3.7.0.v20150422-0725.jar"/>
-        <pathelement location="lib/org.eclipse.core.databinding_1.5.0.v20150422-0725.jar"/>
-        <pathelement location="lib/org.eclipse.core.databinding.beans_1.3.0.v20150422-0725.jar"/>
-        <pathelement location="lib/org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar"/>
-        <pathelement location="lib/org.eclipse.core.databinding.property_1.5.0.v20150422-0725.jar"/>
-        <pathelement location="lib/org.eclipse.equinox.common_3.7.0.v20150402-1709.jar"/>
-        <pathelement location="lib/org.eclipse.jface_3.11.1.v20160128-1644.jar"/>
-        <pathelement location="lib/org.eclipse.jface.databinding_1.7.0.v20150406-2148.jar"/>
-        <pathelement location="lib/org.eclipse.jface.text_3.10.0.v20150603-1752.jar"/>
+        <pathelement location="lib/org.eclipse.core.commands_3.9.0.v20170530-1048.jar"/>
+        <pathelement location="lib/org.eclipse.core.databinding_1.6.100.v20170515-1119.jar"/>
+        <pathelement location="lib/org.eclipse.core.databinding.beans_1.4.0.v20170210-0856.jar"/>
+        <pathelement location="lib/org.eclipse.core.databinding.observable_1.6.100.v20170515-1119.jar"/>
+        <pathelement location="lib/org.eclipse.core.databinding.property_1.6.100.v20170515-1119.jar"/>
+        <pathelement location="lib/org.eclipse.equinox.common_3.9.0.v20170207-1454.jar"/>
+        <pathelement location="lib/org.eclipse.jface_3.13.0.v20170503-1507.jar"/>
+        <pathelement location="lib/org.eclipse.jface.databinding_1.8.100.v20170503-1507.jar"/>
+        <pathelement location="lib/org.eclipse.jface.text_3.12.0.v20170523-1043.jar"/>
 	</path>
     
     <target name="copy-common-files">
@@ -204,15 +205,15 @@
         </jar>
 
         <copy todir="${work}/${folder}/lib">
-            <fileset dir="lib" includes="org.eclipse.core.commands_3.7.0.v20150422-0725.jar"/>
-            <fileset dir="lib" includes="org.eclipse.core.databinding_1.5.0.v20150422-0725.jar"/>
-            <fileset dir="lib" includes="org.eclipse.core.databinding.beans_1.3.0.v20150422-0725.jar"/>
-            <fileset dir="lib" includes="org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar"/>
-            <fileset dir="lib" includes="org.eclipse.core.databinding.property_1.5.0.v20150422-0725.jar"/>
-            <fileset dir="lib" includes="org.eclipse.equinox.common_3.7.0.v20150402-1709.jar"/>
-            <fileset dir="lib" includes="org.eclipse.jface_3.11.1.v20160128-1644.jar"/>
-            <fileset dir="lib" includes="org.eclipse.jface.databinding_1.7.0.v20150406-2148.jar"/>
-            <fileset dir="lib" includes="org.eclipse.jface.text_3.10.0.v20150603-1752.jar"/>
+            <fileset dir="lib" includes="org.eclipse.core.commands_3.9.0.v20170530-1048.jar"/>
+            <fileset dir="lib" includes="org.eclipse.core.databinding_1.6.100.v20170515-1119.jar"/>
+            <fileset dir="lib" includes="org.eclipse.core.databinding.beans_1.4.0.v20170210-0856.jar"/>
+            <fileset dir="lib" includes="org.eclipse.core.databinding.observable_1.6.100.v20170515-1119.jar"/>
+            <fileset dir="lib" includes="org.eclipse.core.databinding.property_1.6.100.v20170515-1119.jar"/>
+            <fileset dir="lib" includes="org.eclipse.equinox.common_3.9.0.v20170207-1454.jar"/>
+            <fileset dir="lib" includes="org.eclipse.jface_3.13.0.v20170503-1507.jar"/>
+            <fileset dir="lib" includes="org.eclipse.jface.databinding_1.8.100.v20170503-1507.jar"/>
+            <fileset dir="lib" includes="org.eclipse.jface.text_3.12.0.v20170523-1043.jar"/>
         </copy>
 
         <copy todir="${work}/${folder}">
